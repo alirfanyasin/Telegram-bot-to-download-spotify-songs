@@ -12,9 +12,9 @@ import spotdl  # Library untuk mendownload lagu
 import os  # Mengelola operasi file dan direktori
 
 # Konfigurasi token dan kredensial API
-client_id = 'c99e4a8b2be04bc3934baf5d94f57f42'
-client_secret = '68644cff9e4846d9a65ec8980b8d0a82'
-botfather_token = '7827161682:AAFBgTUY_IwWOauDSVN0JxANH9rmz1W03Wk'
+client_id = 'MASUKKAN_CLIENT_ID_SPOTIFY_KAMU'
+client_secret = 'MASUKKAN_CLIENT_SECRET_SPOTIFY_KAMU'
+botfather_token = 'MASUKKAN_KODE_BOTFATHER_KAMU'
 
 # Inisialisasi bot, penyimpanan state, dan dispatcher
 bot = Bot(token=botfather_token)
@@ -284,7 +284,8 @@ async def process_callback_query(callback_query: types.CallbackQuery, state: FSM
     )
 
     # Menentukan direktori output untuk menyimpan file lagu
-    output_dir = r'C:\\Users\\Irfan Yasin\\Music'
+    output_dir = r'E:\\Code_Project\\06_Song_Download\\Music'
+    
     command = f'spotdl "{song_url}" --output "{output_dir}"'
     response = os.system(command)
 
